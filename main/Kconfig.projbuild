@@ -12,6 +12,28 @@ menu "Example Configuration"
         help
             WiFi password (WPA or WPA2) for the example to use.
 
+    config MOTION_BUZZER_GPIO
+        int "Buzzer GPIO pin"
+        range 0 39
+        default 18
+        help
+            GPIO pin connected to the buzzer (default: GPIO 18).
+
+    config MOTION_RSSI_THRESHOLD
+        int "Motion signal threshold (dBm)"
+        range -127 0
+        default -50
+        help
+            The buzzer turns on when the Wi-Fi signal is weaker than this value.
+            Adjust this after testing in the room.
+
+    config MOTION_POLL_INTERVAL_MS
+        int "Signal check interval (ms)"
+        range 100 10000
+        default 200
+        help
+            Time between Wi-Fi signal-strength readings.
+
     choice EXAMPLE_SCAN_METHOD
         prompt "scan method"
         default EXAMPLE_WIFI_FAST_SCAN
