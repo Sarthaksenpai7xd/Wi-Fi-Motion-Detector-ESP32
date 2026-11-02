@@ -32,5 +32,3 @@ Run `idf.py menuconfig` and navigate to **Example Configuration** to change:
    ```
 4. Once connected, watch the serial output to see the real-time RSSI readings and tune your threshold accordingly.
 
-## Security Note
-This repository includes a `.gitignore` configured to ignore the `sdkconfig` and `sdkconfig.old` files, ensuring your actual Wi-Fi credentials are never accidentally pushed to version control.
